@@ -1,0 +1,18 @@
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select::after {
+  clear: both;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    rotate: -45deg;
+    width: 9px;
+    height: 9px;
+    right: 26px;
+    position: absolute;
+    top: 50%;
+    translate: 0 -62%;
+}

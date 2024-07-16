@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.0/build/css/intlTelInput.css"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+      .video-wrapper {
+        width: 100dvw;
+        height: 100dvh;
+        overflow: hidden;
+        position: relative;
+      }
+      .video-wrapper button {
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        background: black;
+        color: white;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .video-wrapper video {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-wrapper">
+      <video autoplay preload="none" loop muted id="heroVideo">
+        <source type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button>mute</button>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        const video = document.getElementById("heroVideo");
+        const button = document.querySelector(".video-wrapper button");
+        video.src =
+          "https://www.dropbox.com/scl/fi/cco9xpjvbqllfy6180u7e/fedoriv-brand-video-v5-1920x646-1.mp4?rlkey=ez190z2mc9p2c7ttmdbhw86qz&st=pjylwif2&raw=1";
+        button.onclick = () => {
+          video.muted = !video.muted;
+        };
+      });
+    </script>
+  </body>
+</html>
