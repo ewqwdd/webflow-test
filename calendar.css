@@ -1,0 +1,55 @@
+.calendar-wrapper {
+    border: 1px solid rgb(26, 26, 26);
+    border-radius: 20px;
+}
+
+.calendar-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 26px;
+    background: rgb(237, 237, 238);
+}
+
+.calendar-header-button-left-icon,
+.calendar-header-button-right-icon {
+    height: 13px;
+    width: 7px;
+    background-image: url("data:image/svg+xml;utf8,<svg width='7' height='13' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M6 12L1 6.5L6 1' stroke='%23000' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+.calendar-header-button-right-icon {
+    transform: rotate(180deg);
+}
+
+.calendar-header {
+font-family: 'Nunito';
+font-size: 16px;
+font-weight: 700;
+line-height: 19.2px;
+text-align: left;
+text-underline-position: 'from-font';
+text-decoration-skip-ink: none;
+}
+
+.calendar-day {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.calendar-day.active {
+    color: rgb(255, 255, 255);
+    background: rgb(26, 26, 26);
+}
+
+/* Overite styles */
+.calendar-day:not(.active) {
+    background: none;
+}
+
+.js-calendar {
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+}
+
+
